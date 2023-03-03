@@ -11,6 +11,12 @@ b[1].style.fontWeight="bold"
 //give error
 //b.style.backgroundColor="pink"
 
-for(var i=0 ;i<b.length;i++){
+/*for(var i=0 ;i<b.length;i++){
     b[i].style.backgroundColor="pink"
+}*/
+
+b[2].style.backgroundColor ="green"
+//b[1].style.fontWeight="bold"
+for(var i=0 ;i<b.length;i++){
+    b[i].style.fontWeight="bold"
 }
