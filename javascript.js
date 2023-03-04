@@ -61,14 +61,31 @@ console.log(li)
 
 // QUERYSELECTORALL
 
-var title=document.querySelectorAll('.title')
+// var title=document.querySelectorAll('.list-group-item')
+// console.log(title)
+// title[1].style.backgroundColor="green"
+//  title[2].style.visibility="hidden"
+
+// var odd=document.querySelectorAll('li:nth-child(odd)')
+// var even=document.querySelectorAll('li:nth-child(even)')
+
+// for(var i=0 ;i<odd.length;i++){
+//  odd[i].style.backgroundColor="grey"
+//  even[i].style.backgroundColor="skyblue"
+// }
+
+
+//QUERYSELECTOR AND QUERYSELECTORALL 
+
+var title=document.querySelectorAll('.list-group-item')
 console.log(title)
-title[0].textContent="enter text"
+title[0].style.backgroundColor="green"
+
+title[1].style.color="white"
+ title[3].style.visibility="hidden"
 
 var odd=document.querySelectorAll('li:nth-child(odd)')
-var even=document.querySelectorAll('li:nth-child(even)')
-
-for(var i=0 ;i<odd.length;i++){
- odd[i].style.backgroundColor="grey"
- even[i].style.backgroundColor="skyblue"
-}
+ for(var i=0 ;i<odd.length;i++){
+     odd[i].style.backgroundColor="green"
+    //  even[i].style.backgroundColor="skyblue"
+     }
