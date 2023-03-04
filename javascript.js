@@ -20,3 +20,16 @@ b[1].style.fontWeight="bold"
 for(var i=0 ;i<b.length;i++){
     b[i].style.fontWeight="bold"
 }
+
+
+var li=document.getElementsByTagName('li')
+console.log(li)
+console.log(li[1])
+//li[1].textContent= "kheer"
+//li[1].style.backgroundColor ="yellow"
+//li[1].style.fontWeight="bold"
+
+for(var i=0 ;i<li.length;i++){
+    li[i].style.fontWeight="bold"
+    li[i].style.backgroundColor ="yellow"
+}
