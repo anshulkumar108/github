@@ -40,21 +40,35 @@ console.log(li)
 
 //QUERYSELECTOR
 
-var input =document.querySelector('input')
-input.value="hello world"
+// var input =document.querySelector('input')
+// input.value="hello world"
 
-var header = document.querySelector('#main-header')
-header.style.border="solid 2px blue"
+// var header = document.querySelector('#main-header')
+// header.style.border="solid 2px blue"
 
-var submit =document.querySelector('input[type="submit"]')
-submit.value="SEND"
-submit.style.backgroundColor="red"
+// var submit =document.querySelector('input[type="submit"]')
+// submit.value="SEND"
+// submit.style.backgroundColor="red"
 
-var item=document.querySelector('.list-group-item')
-item.style.backgroundColor="orange"
+// var item=document.querySelector('.list-group-item')
+// item.style.backgroundColor="orange"
 
-var lastitem=document.querySelector('.list-group-item:last-child')
-lastitem.style.backgroundColor="purple"
+// var lastitem=document.querySelector('.list-group-item:last-child')
+// lastitem.style.backgroundColor="purple"
 
-var seconditem=document.querySelector('.list-group-item:nth-child(2)')
-seconditem.style.backgroundColor="grey"
+// var seconditem=document.querySelector('.list-group-item:nth-child(2)')
+// seconditem.style.backgroundColor="grey"
+
+// QUERYSELECTORALL
+
+var title=document.querySelectorAll('.title')
+console.log(title)
+title[0].textContent="enter text"
+
+var odd=document.querySelectorAll('li:nth-child(odd)')
+var even=document.querySelectorAll('li:nth-child(even)')
+
+for(var i=0 ;i<odd.length;i++){
+ odd[i].style.backgroundColor="grey"
+ even[i].style.backgroundColor="skyblue"
+}
