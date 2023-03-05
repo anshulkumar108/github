@@ -12,6 +12,29 @@ console.log(itemlist.parentElement)
 itemlist.parentElement.style.backgroundColor="grey"
 console.log(itemlist.parentElement.parentElement)
 itemlist.parentElement.parentElement.style.backgroundColor="lightblue"
+console.log(itemlist.parentElement.parentElement.parentElement)
+itemlist.parentElement.parentElement.parentElement.style.backgroundColor="pink"
 
 
+
+//CHILD NODE : this take empty spaces also.
+console.log(itemlist.childNodes)
+
+//childern will take empty space .it gives only itemlist.
+console.log(itemlist.children)
+itemlist.children[1].style.backgroundColor="orange"
+
+//FIRST CHILD NODE : this take empty spaces also.
+console.log(itemlist.firstChild)
+
+//childern will take empty space .it gives only itemlist.
+console.log(itemlist.firstElementChild)
+itemlist.firstElementChild.style.backgroundColor="magenta"
+
+//FIRST CHILD NODE : this take empty spaces also.
+console.log(itemlist.lastChild)
+
+//childern will take empty space .it gives only itemlist.
+console.log(itemlist.lastElementChild)
+itemlist.lastElementChild.style.backgroundColor="purple"
 
