@@ -1,6 +1,7 @@
 var form = document.getElementById('addForm')
 var itemList = document.getElementById('items');
 var filter = document.getElementById('filter');
+//var addCategory=document.getElementById('addForm')
 
 //form submit event
 form.addEventListener('submit', addItem)
@@ -15,8 +16,7 @@ itemList.addEventListener('click', removeItem)
 filter.addEventListener('keyup', filterItems);
 // Add item
 function addItem(e) {
-    e.preventDefault();
-
+    e.preventDefault()
     //get input value
     var newitem = document.getElementById('item').value
 
@@ -25,11 +25,14 @@ function addItem(e) {
 
     //add className
     li.className = "list-group-item"
-
-    console.log(li)
+    // console.log(li)
 
     //add text node with input value
     li.appendChild(document.createTextNode(newitem))
+
+    var description = document.getElementById('description').value
+    var descriptionNode = document.createTextNode(" " + description)
+    li.appendChild(descriptionNode)
 
     //create delete btn
     var deletebtn = document.createElement('button')
@@ -47,27 +50,24 @@ function addItem(e) {
     //append li to list
     itemList.appendChild(li)
 
+    // //create delete btn
+     var editbtn = document.createElement('button')
 
 
+     //add classes to delete btn 
+       editbtn.className = "edit"
+
+     li.appendChild(editbtn)
+
+     itemList.appendChild(li)
 }
 
-// //create delete btn
-// var editbtn = document.createElement('button')
 
 
-// //add classes to delete btn
-// editbtn.className = "edit"
-
-// li.appendChild(editbtn)
-
-// itemList.appendChild(li
-
-//     // remove item function
+// remove item function
 function removeItem(e) {
     e.preventDefault();
     //console.log(1);
-
-
     if (e.target.classList.contains('delete')) {
         if (confirm('Are You Sure?')) {
             var li = e.target.parentElement;
@@ -75,7 +75,6 @@ function removeItem(e) {
         }
 
     }
-
 }
 
 // Filter Items
@@ -85,14 +84,21 @@ function filterItems(e) {
     //console.log(text)
     // Get lis
     var items = itemList.getElementsByTagName('li');
-    console.log(items)
+    //console.log(items)
     // Convert to an array
-    // Array.from(items).forEach(function (item) {
-    //     var itemName = item.firstChild.textContent;
-    //     if (itemName.toLowerCase().indexOf(text) != -1) {
-    //         item.style.display = 'block';
-    //     } else {
-    //         item.style.display = 'none';
-    //     }
-    // });
+    Array.from(items).forEach(function (item) {
+        const itemName = item.firstChild.textContent;
+        const description = item.childNodes[1].textContent;
+        if (itemName.toLowerCase().indexOf(text) != -1 || description.toLowerCase().indexOf(text) != -1) {
+            item.style.display = 'block';
+        } else {
+            item.style.display = 'none';
+        }
+    });
 }
+
+        // var inp=document.createElement('input')
+        // inp.className='form-control mr-2'
+        // //console.log(inp)
+
+        // form.append(inp)
