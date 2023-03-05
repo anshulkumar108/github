@@ -48,21 +48,23 @@ var itemlist=document.querySelector('#items')
 // //nextElementSibling
 // console.log(itemlist.previousElementSibling)
 
-//CREATE ELEMENT
+// //CREATE ELEMENT
 
 var newdiv=document.createElement('div')
 
 
-//addclass
-newdiv.className="hello"
+// //addclass
+// newdiv.className="hello"
 
-//addid
-newdiv.id="hi"
+// //addid
+// newdiv.id="hi"
 
-//addAttribute
-newdiv.setAttribute('title','john')
+// //addAttribute
+// newdiv.setAttribute('title','john')
 
-//createnewDivText  createtextNode
+//<div class="hello" id="hi" title="john"> </div>
+
+// //createnewDivText  createtextNode
 
 var newdivText=document.createTextNode("hello developer")
 
@@ -76,7 +78,16 @@ newdiv.style.fontSize="30px"
 container.insertBefore(newdiv,h1)
 
 
+var cr=document.createElement('li')
+var crText=document.createTextNode("hello developer")
+cr.appendChild(crText)
+console.log(cr)
 
-//<div class="hello" id="hi" title="john"> </div>
+var addelement =document.getElementById('items')
+
+addelement.innerHTML
+//console.log(addelement)
+
+addelement.innerHTML= cr.appendChild(crText) + addelement.innerHTML
 
 
