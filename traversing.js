@@ -38,12 +38,45 @@ var itemlist=document.querySelector('#items')
 // console.log(itemlist.lastElementChild)
 // itemlist.lastElementChild.style.backgroundColor="purple"
 
-//nextSibling
-console.log(itemlist.nextSibling)
-//nextElementSibling
-console.log(itemlist.nextElementSibling)
+// //nextSibling
+// console.log(itemlist.nextSibling)
+// //nextElementSibling
+// console.log(itemlist.nextElementSibling)
 
-//previousSibling
-console.log(itemlist.previousSibling)
-//nextElementSibling
-console.log(itemlist.previousElementSibling)
+// //previousSibling
+// console.log(itemlist.previousSibling)
+// //nextElementSibling
+// console.log(itemlist.previousElementSibling)
+
+//CREATE ELEMENT
+
+var newdiv=document.createElement('div')
+
+
+//addclass
+newdiv.className="hello"
+
+//addid
+newdiv.id="hi"
+
+//addAttribute
+newdiv.setAttribute('title','john')
+
+//createnewDivText  createtextNode
+
+var newdivText=document.createTextNode("hello developer")
+
+newdiv.appendChild(newdivText)
+
+var container=document.querySelector('header .container')
+var h1=document.querySelector('header h1')
+
+console.log(newdiv)
+newdiv.style.fontSize="30px"
+container.insertBefore(newdiv,h1)
+
+
+
+//<div class="hello" id="hi" title="john"> </div>
+
+
