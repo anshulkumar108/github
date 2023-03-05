@@ -83,11 +83,12 @@ var crText=document.createTextNode("hello developer")
 cr.appendChild(crText)
 console.log(cr)
 
+
 var addelement =document.getElementById('items')
 
 addelement.innerHTML
 //console.log(addelement)
 
-addelement.innerHTML= cr.appendChild(crText) + addelement.innerHTML
+addelement.innerHTML= '<li> hello world </li>' + addelement.innerHTML
 
 
