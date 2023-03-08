@@ -16,15 +16,48 @@ function myfunc(event) {
      userList.appendChild(list)
 
 
-     const myspan = document.createElement('button')
-        myspan.className = 'btn float-right'
-        myspan.innerHTML = 'DELETE';
-        userList.appendChild(myspan)
+      const myspan = document.createElement('button')
+         myspan.className = 'btn float-right'
+         myspan.innerHTML = 'DELETE';
+         userList.appendChild(myspan)
 
-        const close = document.querySelectorAll('button')
-         for (let i = 0; i < close.length; i++) {
-        close[i].addEventListener('click', () => {
-            close[i].parentElement.style.display = 'none'
-        })
+         const close = document.querySelectorAll('button')
+          for (let i = 0; i < close.length; i++) {
+         close[i].addEventListener('click', () => {
+             close[i].parentElement.style.display = 'none'
+         })
+
+        // const delButton= document.createElement('input')
+        // delButton.type='button'
+        // delButton.value='DELETE'
+
+        // delButton.onclick = () =>{
+        //    list.parentElement.style.display='none'
+        //     localStorage.removeItem(mydata)
+        //     userList.removeItem(list)
+        // }
+        // list.appendChild(delButton)
+        // userList.appendChild(list)
     }
+    const editbtn=document.createElement('input')
+    editbtn.type='button'
+    editbtn.value='EDIT'
+    //console.log(editbtn)
+   
+    editbtn.className = 'btn float-right'
+     editbtn.onclick= () =>{
+         localStorage.removeItem(mydata.inputEmail)
+         userList.removeChild(list)
+
+         document.getElementById('email').value=mydata.inputEmail
+         document.getElementById('name').value=mydata.inputName
+     }
+       list.appendChild(myspan)
+       list.appendChild(editbtn)
+       userList.appendChild(list)
+
+
 }
+
+
+
