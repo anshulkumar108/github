@@ -8,23 +8,37 @@ function myfunc(event) {
         inputEmail
     };
 
-    axios.post("https://crudcrud.com/api/e981839b6782479f9c27c52a0cf332c3/appointment", mydata)
-    .then((response)=>{
-        showNewUserOnScreen(response.mydata)
-        console.log(response)
+     axios.post("https://crudcrud.com/api/e981839b6782479f9c27c52a0cf332c3/appointment", mydata)
+     .then((response)=>{
+        
+         console.log(response)
+        
+     })
+     .catch((err)=>{
+         console.log(err)
+     })
+
+    
+window.addEventListener("load", ()=>{
+    axios.get("https://crudcrud.com/api/e981839b6782479f9c27c52a0cf332c3/appointment",mydata)
+    .then((res)=>{
+        console.log(res);
+        for(var i=0; i<res.data.length;i++){
+            console.log(res.data[i]);
+        }
     })
     .catch((err)=>{
         console.log(err)
     })
+})
 
-    
 
     // let myobj_serialized=JSON.stringify(mydata)
     // localStorage.setItem("data", myobj_serialized)
 
     const userList=document.querySelector('#users')
     const list=document.createElement('li')  
-     list.appendChild(document.createTextNode( inputName + ' ' + inputEmail ))
+     list.appendChilD(console.log(response.mydata))
      userList.appendChild(list)
 
 
