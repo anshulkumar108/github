@@ -102,3 +102,33 @@ function filterItems(e) {
         // //console.log(inp)
 
         // form.append(inp)
+
+
+        function clearerror() {
+            errors = document.getElementsByClassName('formerror');
+            for (let item of errors) {
+                item.innerHTML = " ";
+            }
+        }
+        
+        function seterror(id, error) {
+            element = document.getElementById(id);
+            element.getElementsByClassName('formerror')[0].innerHTML = error;
+        }
+
+        // var returnval = true;
+    // //perform validation if validation fails ,set values of returnval to false
+    // var name = document.forms['bookingApp']["name"].value; //document.forms will bring all forms
+    // //console.log(name);
+    // if (name.length < 5) {
+    //     seterror('name', ' *length is too short');
+    //     returnval = false;
+    //     return returnval;
+    // }
+
+    // var email = document.forms['bookingApp']["email"].value;
+    // if (email.length > 20) {
+    //     seterror('email', ' *length is too long');
+    //     returnval = false;
+    //     return returnval;
+    // }

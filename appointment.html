@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Registration Form</title>
+
+  <style>
+    body{
+      padding: 10px 50px;
+    }
+  </style>
+  
+</head>
+
+<body>
+  <div class="container">
+    <form id="registration"  name="bookingApp"  >
+      <h1>Book Call</h1>
+
+      <p>Book a call slot and our representative will call you within 1hr of selected time</p>
+
+     
+      <div class="formDesgin" >
+        Name : <input type='text' name='name' id='name' required placeholder="Enter Your Name">
+        <b><span class="formerror" ></span><br><br> 
+      </div>
+      
+      <div class="formDesgin" >
+        Email : <input type='email' name='email' id='email' placeholder="Enter Your Email" required>
+        <b><span class="formerror" ></span><br><br>
+      </div>
+    
+      <div class="formDesgin" >
+        Phone : <input type='phone' name='phone' id='phone' placeholder="Enter Your Phone Number" required>
+        <b><span class="formerror" ></span><br><br>
+    </div>
+
+      <!-- <label>Time for Call : </label><br>
+      <input type='date' name='date' id='date' placeholder="Time for Call">
+      <input type='time' name='time' id='time' placeholder="Time for Call"><br><br> -->
+
+      <input type="submit" class="button" id='call' value="GET A CALL"> <br><br>
+
+    </form>
+  </div>
+
+  <ul id="user"></ul>
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="bookingApp.js" ></script>
+
+</html>
